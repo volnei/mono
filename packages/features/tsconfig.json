@@ -1,13 +1,15 @@
 {
   "extends": "@mono/typescript-config/base.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "src",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "target": "ESNext",
-    "declaration": true,
-    "outDir": "dist",
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "@mono/domain/*": ["../../domain/src/*"],
+      "@mono/features/*": ["*"]
+    }
   },
   "include": ["src"]
 }

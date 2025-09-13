@@ -1,11 +1,16 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
+  "extends": "@mono/typescript-config/nextjs.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@mono/domain/*": ["../../packages/domain/src/*"], 
+      "@mono/features/*": ["../../packages/features/src/*"],
+    },
     "plugins": [
       {
         "name": "next"
-      }
-    ]
+      },
+    ],
   },
   "include": [
     "**/*.ts",
